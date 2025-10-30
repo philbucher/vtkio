@@ -6,7 +6,7 @@
 //! serial and parallel XML file formats. See the [official VTK documentation] for details.
 //!
 //! [`Vtk`]: struct.Vtk.html
-//! [official VTK documentation]: https://kitware.github.io/vtk-examples/site/VTKFileFormats/
+//! [official VTK documentation]: https://docs.vtk.org/en/latest/vtk_file_formats/index.html/
 //!
 
 use std::any::TypeId;
@@ -1838,7 +1838,7 @@ impl Cells {
 ///
 /// These are explicitly written in `UnstructuredGrid`s and some are referred to in `PolyData`
 /// datasets.  For more details on each of these types see, the [VTK file
-/// formats](https://kitware.github.io/vtk-examples/site/VTKFileFormats/) documentation.
+/// formats](https://docs.vtk.org/en/latest/vtk_file_formats/vtk_legacy_file_format.html#legacy-file-examples/) documentation.
 #[derive(Copy, Clone, PartialEq, Debug, FromPrimitive)]
 pub enum CellType {
     // Linear cells
