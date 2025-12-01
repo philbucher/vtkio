@@ -16,7 +16,7 @@ use std::ops::RangeInclusive;
 use std::path::{Path, PathBuf};
 
 use bytemuck::{cast_slice, cast_vec};
-use num_derive::FromPrimitive;
+use num_derive::{FromPrimitive, ToPrimitive};
 use num_traits::ToPrimitive;
 
 /// Error type describing failure modes of various model processing tasks and validation.
@@ -1839,7 +1839,8 @@ impl Cells {
 /// These are explicitly written in `UnstructuredGrid`s and some are referred to in `PolyData`
 /// datasets.  For more details on each of these types see, the [VTK file
 /// formats](https://kitware.github.io/vtk-examples/site/VTKFileFormats/) documentation.
-#[derive(Copy, Clone, PartialEq, Debug, FromPrimitive)]
+#[derive(Copy, Clone, PartialEq, Debug, FromPrimitive, ToPrimitive)]
+#[repr(u8)]
 pub enum CellType {
     // Linear cells
     Vertex = 1,
